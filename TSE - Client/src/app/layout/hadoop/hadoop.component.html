@@ -1,0 +1,77 @@
+<link href="../../assets/css/style.css" rel="stylesheet">
+
+<ngx-loading [show]="parameter.loading" [config]="{ backdropBackgroundColour: 'rgba(0,0,0,0.3)' }"></ngx-loading>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="ibox float-e-margins">
+      <div class="ibox-title">
+        <input class=" form-control"  placeholder="Search..." #mysearch [ngModel]="mymodel" (ngModelChange)="Search(mysearch.value)"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content" *ngIf="parameter.data!=''">
+  <div class="row animated fadeInRight">
+    <div class="col-md-12">
+      <div class="ibox ">
+        <div class="ibox-title">
+          <h5>Feeds</h5>
+        </div>
+        <div class="ibox-content">
+          <div>
+            <div class="feed-activity-list">
+
+              <div class="feed-element row" *ngFor="let item of parameter.data | paginate: { itemsPerPage: parameter.itemsPerPage, currentPage: parameter.p, totalItems: parameter.total }; let i=index">
+                <div class="col-md-2">
+                  <a href="#" class="float-left">
+                    <img alt="image" class="rounded-circle" src="../../assets/img/default_img.png">
+                  </a>
+                  <small class="float-right text-navy">{{item.misc_timestamp}}</small>
+                </div>
+                <div class="col-md-4">
+                  <div class="media-body">
+                    <strong>{{item.user_name}}</strong><small *ngIf="item.user_location!='null'"> AT</small> <strong *ngIf="item.user_location!='null'">{{item.user_location}}</strong>. <br>
+                    <p class="text-muted" *ngIf="item.user_location!='null'"> {{item.user_description}}</p>
+                    <div class="actions">
+                      <a href="" class="btn btn-xs btn-white"><i class="fa fa-users"></i> {{item.user_friends}} Friends</a>
+                      <a href="" class="btn btn-xs btn-danger"><i class="fa fa-heart"></i> {{item.user_followers}} Followers</a>
+                      <a href="" class="btn btn-xs btn-primary" *ngIf="item.user_verified=='TRUE'"><i class="fa fa-check"></i> Verified</a>
+                      <a href="" class="btn btn-xs btn-danger" *ngIf="item.user_verified=='FALSE'"><i class="fa fa-times"></i> Not Verified</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 media-body">
+                  <strong>Hashtags</strong>
+                  <p class="text-muted" *ngIf='item.tweet_hastags==[]'>N/A</p>
+                  <p class="text-muted" *ngIf='item.tweet_hastags!=[]'>{{item.tweet_hashtags}}</p>
+                </div>
+                <div class="photos col-md-4 media-body">
+                  <img alt="image" class="feed-photo" src="../../assets/img/343434.jpg">
+                </div>
+
+              </div>
+
+            </div>
+
+            <pagination-controls class="my-pagination" (pageChange)="getPage($event)" *ngIf="parameter.data!=''"></pagination-controls>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

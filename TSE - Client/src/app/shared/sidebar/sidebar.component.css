@@ -1,0 +1,67 @@
+/*.sidebar_nav_bc{
+    background-color: rgb(46, 59, 75);
+}*/
+.admin_name{
+  color: #fff;
+}
+nav{
+  background: #222;
+}
+nav ul{
+  background-color:#3ec7c8;
+}
+nav ul li a span{
+  font-size: 15px;
+}
+nav .nav-header{
+  text-align: center;
+  background:#3ec7c8 !important;
+  padding: 0px;
+  padding-top: 10px;
+}
+nav .nav-header span img{
+  width: 202px;
+  height: 98px;
+  margin: auto;
+}
+.navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus {
+  background-color:#96c9cafa; color: white;
+}
+.nested-menu .list-group-item {
+  cursor: pointer; background-color: transparent; border: none; color: #fff;
+}
+.nested-menu .list-group-item .drop-down-nav{
+  padding-left: 6px; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 15px; line-height: 1.42857143; color: #fff; font-weight: 600;
+}
+.nested-menu .list-group-item:hover{
+  cursor: pointer; border: none; background-color:#96c9cafa; color: white;
+}
+.nested-menu .nested {
+  list-style-type: none;
+}
+.nested-menu ul.submenu {
+  display: none; height: 0; background-color: #3ec7c8;
+}
+.nested-menu .expand ul.submenu {
+  display: block; list-style-type: none; height: auto; background-color: #3ec7c8;
+}
+.nested-menu .expand ul.submenu li a {
+  color: #FFF; padding: 10px; display: block;
+}
+.nav > li > a {
+  color: #fff;
+}
+.navbar-default{
+  background-color: #3ec7c8;
+  height: 100%!important;
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+
+}
+
+nav[_ngcontent-c2] .nav-header[_ngcontent-c2] span[_ngcontent-c2] img[_ngcontent-c2] {
+  width: 148px;
+  height: 98px;
+  margin: auto;
+}

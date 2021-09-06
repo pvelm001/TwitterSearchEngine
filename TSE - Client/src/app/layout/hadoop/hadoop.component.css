@@ -1,0 +1,44 @@
+.my-pagination{
+  text-align: center;
+}
+.btn-group{
+  width: 115px;
+}
+.feed-element img.rounded-circle, .dropdown-messages-box img.rounded-circle {
+  width: 154px;
+  height: 154px;
+}
+.feed-element > a img {
+  margin-right: 10px;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.feed-element, .media-body {
+  overflow: hidden;
+}
+b, strong {
+  font-weight: 700;
+  font-size: 20px;
+}
+.small, small {
+  font-size: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.sidebar-panel .feed-element, .media-body, .sidebar-panel p {
+  font-size: 12px;
+}
+.float-left {
+  float: left !important;
+}
+
+.text-muted[_ngcontent-c3] {
+  color: #888888;
+  font-size: 16px;
+}
+
+
