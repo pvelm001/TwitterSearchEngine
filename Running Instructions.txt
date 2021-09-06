@@ -1,3 +1,0 @@
-Use npm install before Angular ng serve
-
-Use IntelliJ to run the SearchEngine 
